@@ -4,9 +4,9 @@ import should from 'should';
 import {emitStrPromise, uppercase, trimRight, addGreeting} from './utils';
 import fp from 'lodash/fp';
 
-describe('test transferer', ()=>{
+describe('test bj-goods', ()=>{
 
-  describe('transfer should convey data to handler function correctly.', function(){
+  describe('transfer should convey data to handler function correctly.', () => {
     it('should transferring success', (done) => {
       let rst = new Transferer(emitStrPromise("I am just born.  "))
       .transfer(uppercase)
@@ -20,5 +20,22 @@ describe('test transferer', ()=>{
       });
       
     })
+  });
+
+  describe('isPromise should work correctly', () => {
+    it('should be a Promise', (done) => {
+      let promise = Promise.resolve("hello world");
+      let rst = isPromise(promise);
+      rst.should.equal(true);
+      done();
+    });
+
+    it('shouldn\'t be a Promise', (done) => {
+      let str = 'hello world';
+      let rst = isPromise(str);
+      rst.should.equal(false);
+      done();
+    });
   })
+
 });
