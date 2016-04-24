@@ -1,5 +1,5 @@
 
-import  {Transferer, isPromise} from '..';
+import  {Transferer, isPromise} from '../src';
 import should from 'should';
 import {emitStrPromise, uppercase, trimRight, addGreeting} from './utils';
 import fp from 'lodash/fp';
