@@ -1,6 +1,6 @@
 {
   "name": "bj-goods",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "deliver several useful tools for node development. ",
   "main": "lib/index.js",
   "scripts": {
